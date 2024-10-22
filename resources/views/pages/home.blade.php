@@ -3,6 +3,7 @@
 
 @section('main-content')
 <main id="main">
+    @include('partials.hero')
 
     <div class="bg-main">
         <div class="container">
@@ -20,7 +21,7 @@
 
                             <div class="card-body">
                                 <h5 class="card-title">
-                                    {{ $comic['title'] }}
+                                    {{ strtoupper($comic['title']) }}
                                 </h5>
                             </div>
 
