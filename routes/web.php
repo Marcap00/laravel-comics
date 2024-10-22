@@ -15,16 +15,45 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
     $linksHeader = [
-        "CHARACTERS",
-        "COMICS",
-        "MOVIES",
-        "TV",
-        "GAMES",
-        "COLLECTIBLES",
-        "VIDEOS",
-        "NEWS",
-        "SHOP"
+        [
+            "name" => "characters",
+            "active" => true
+        ],
+        [
+            "name" => "comics",
+            "active" => false
+        ],
+        [
+            "name" => "movies",
+            "active" => false
+        ],
+        [
+            "name" => "tv",
+            "active" => false
+        ],
+        [
+            "name" => "games",
+            "active" => false
+        ],
+        [
+            "name" => "collectibles",
+            "active" => false
+        ],
+        [
+            "name" => "videos",
+            "active" => false
+        ],
+        [
+            "name" => "news",
+            "active" => false
+        ],
+        [
+            "name" => "shop",
+            "active" => false
+        ]
     ];
+
+
     $comicsList = config('db');
     return view(
         'pages.home',
