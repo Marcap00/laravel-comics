@@ -1,10 +1,43 @@
+/* CSS RESET */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Open Sans', sans-serif;
+    font-family: "Open Sans";
 }
 
-h1 {
-    color: red;
+/* GENERAL */
+a {
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+}
+
+img {
+    width: auto;
+    max-height: 100%;
+}
+
+/* UTILITIES */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+/* Layout */
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -10px;
+}
+
+.row.row-cols>* {
+    flex: 0 0 calc(100% / 6);
+}
+
+.col {
+    padding: 0 10px;
 }
