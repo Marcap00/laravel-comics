@@ -14,5 +14,20 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('pages.home');
+    $linksHeader = [
+        "CHARACTERS",
+        "COMICS",
+        "MOVIES",
+        "TV",
+        "GAMES",
+        "COLLECTIBLES",
+        "VIDEOS",
+        "NEWS",
+        "SHOP"
+    ];
+    $comicsList = config('db');
+    return view(
+        'pages.home',
+        compact('linksHeader', 'comicsList')
+    );
 })->name('home');
