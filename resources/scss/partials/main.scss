@@ -1,0 +1,71 @@
+#main {
+
+    .container {
+        text-align: center;
+        position: relative;
+        padding-top: 2rem;
+        padding: 3rem 15px 0 15px;
+    }
+
+    .bg-main {
+        background-color: #1C1C1C;
+
+
+
+        h3,
+        button {
+            color: white;
+            background-color: dodgerblue;
+        }
+
+        h3 {
+            display: inline-block;
+            padding: .5rem 1rem;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+            position: absolute;
+            top: -20px;
+            left: 0;
+        }
+
+        button {
+            font-weight: 700;
+            border: 1px solid dodgerblue;
+            padding: .5rem 2.5rem;
+            margin: 1rem 0;
+            cursor: pointer;
+        }
+    }
+
+    .card-img {
+        max-height: 150px;
+        width: 150px;
+        object-fit: cover;
+        object-position: top;
+        margin-bottom: 1rem;
+    }
+
+    .card-body {
+        max-width: 150px;
+
+        text-align: left;
+        color: #fff;
+
+        h5 {
+            font-weight: 600;
+            margin-bottom: 1rem;
+        }
+
+    }
+}
+
+
+@media screen and (max-width: 1080px) {
+
+    .card {
+        margin-left: 25px;
+    }
+
+    .row.row-cols>* {
+        flex-basis: 25%;
+    }
+}
