@@ -17,6 +17,8 @@
     <main>
         @yield('main-content')
     </main>
+    {{-- Include banner --}}
+    @include('partials.banner')
     {{-- Include footer --}}
     @include('partials.footer')
     @yield('additional-scripts')

@@ -1,0 +1,46 @@
+.bg-banner-icons {
+    background-color: dodgerblue;
+
+    .banner-icons {
+        display: flex;
+        justify-content: space-evenly;
+        padding: 3rem 0;
+
+        .banner-icon {
+            display: flex;
+            align-items: center;
+            gap: .5rem;
+            color: white;
+            font-weight: 600;
+
+            img {
+                max-width: 50px;
+                height: 50px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1080px) {
+
+    .banner-icon {
+        img {
+            max-width: 40px;
+            height: 40px;
+        }
+
+        p {
+            font-size: 14px;
+        }
+    }
+}
+
+@media screen and (max-width: 1080px) {
+
+    .banner-icon {
+
+        p {
+            margin-right: 20px;
+        }
+    }
+}
