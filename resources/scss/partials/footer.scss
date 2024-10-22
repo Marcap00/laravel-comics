@@ -1,0 +1,28 @@
+.bg-footer-bottom {
+    background-color: #303030;
+
+    .footer-bottom {
+        height: 80px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 3rem 0;
+
+
+        button {
+            background-color: transparent;
+            border: 2px solid dodgerblue;
+            color: #fff;
+            font-weight: 600;
+            padding: .5rem;
+            cursor: pointer;
+        }
+
+        .social {
+            color: dodgerblue;
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+    }
+}
