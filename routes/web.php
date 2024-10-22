@@ -14,72 +14,12 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    $linksHeader = [
-        [
-            "name" => "characters",
-            "active" => true
-        ],
-        [
-            "name" => "comics",
-            "active" => false
-        ],
-        [
-            "name" => "movies",
-            "active" => false
-        ],
-        [
-            "name" => "tv",
-            "active" => false
-        ],
-        [
-            "name" => "games",
-            "active" => false
-        ],
-        [
-            "name" => "collectibles",
-            "active" => false
-        ],
-        [
-            "name" => "videos",
-            "active" => false
-        ],
-        [
-            "name" => "news",
-            "active" => false
-        ],
-        [
-            "name" => "shop",
-            "active" => false
-        ]
-    ];
-    $imagesFooter = [
-        [
-            "imageUrl" => "facebook",
-            "alt" => "facebook"
-        ],
-        [
-            "imageUrl" => "twitter",
-            "alt" => "twitter"
-        ],
-        [
-            "imageUrl" => "youtube",
-            "alt" => "youtube"
-        ],
-        [
-            "imageUrl" => "pinterest",
-            "alt" => "pinterest"
-        ],
-        [
-            "imageUrl" => "periscope",
-            "alt" => "periscope"
-        ]
-    ];
-
-
-
-    $comicsList = config('db');
+    $imagesBannerIcons = config('images_banner_icons');
+    $linksHeader = config('links_header');
+    $imagesFooter = config('images_footer');
+    $comicsList = config('comics');
     return view(
-        'pages.home',
-        compact('linksHeader', 'comicsList', 'imagesFooter')
+        'pages.comics',
+        compact('linksHeader', 'comicsList', 'imagesBannerIcons', 'imagesFooter')
     );
-})->name('home');
+})->name('comics');
