@@ -1,6 +1,6 @@
 
     <header id="header" class="container">
-        <a href="{{route('home')}}">
+        <a href="{{route('comics')}}">
             <img src="{{asset('images/dc-logo.png')}}" alt="Logo DC Comics">
         </a>
         <nav>
@@ -8,7 +8,7 @@
                 @foreach ($linksHeader as $link)
 
                 <li>
-                    <a href="#" class="{{ $link['active'] ? 'active' : ''}}">{{ strtoupper($link['name']) }}</a>
+                    <a href="{{ route($link["href"])}}" class="{{ $link['active'] ? 'active' : ''}}">{{ strtoupper($link['name']) }}</a>
                 </li>
 
                 @endforeach
