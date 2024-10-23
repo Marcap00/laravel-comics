@@ -1,22 +1,14 @@
 .main-show {
-    .container-show {
-        text-align: center;
-        position: relative;
-        padding-top: 2rem;
-        padding: 3rem 15px;
-    }
+
 
     .img-show {
         width: 300px;
-        /*
-        object-fit: cover;
-        object-position: top;
-        margin-bottom: 1rem; */
     }
 
     .card-body-show {
         text-align: left;
         color: #fff;
+        padding: 1rem;
 
         .card-description {
             color: #a8a8a8;

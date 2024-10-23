@@ -4,7 +4,7 @@
 @section('main-content')
 <main id="main" class="main-show">
     <div class="bg-main">
-        <div class="container-show">
+        <div class="container">
             <div class="card">
                 <div class="row row-cols-2">
                     <div class="col">

@@ -4,13 +4,11 @@
         text-align: center;
         position: relative;
         padding-top: 2rem;
-        padding: 3rem 15px 0 15px;
+        padding: 3rem 15px;
     }
 
     .bg-main {
         background-color: #1C1C1C;
-
-
 
         h3,
         button {
@@ -31,7 +29,7 @@
             font-weight: 700;
             border: 1px solid dodgerblue;
             padding: .5rem 2.5rem;
-            margin: 1rem 0;
+            margin-top: 1rem;
             cursor: pointer;
         }
     }
