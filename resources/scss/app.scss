@@ -39,6 +39,10 @@ img {
     flex: 0 0 calc(100% / 6);
 }
 
+.row.row-cols-2>* {
+    flex: 1 0 50%;
+}
+
 .col {
     padding: 0 10px;
 }

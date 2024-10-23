@@ -10,22 +10,24 @@
             <div class="list-cards">
                 <h3>CURRENT SERIES</h3>
                 <div class="row row-cols">
-                    @foreach ($comicsList as $comic)
+                    @foreach ($comicsList as $index => $comic)
 
                     <div class="col">
-                        <div class="card">
+                        <a href="{{ route("comics.show", $index) }}">
+                            <div class="card">
 
-                            <div class="card-img">
-                                <img class="card-img" src="{{ $comic['thumb'] }}" alt="{{ $comic['title'] }}">
+                                <div class="card-img">
+                                    <img class="card-img" src="{{ $comic['thumb'] }}" alt="{{ $comic['title'] }}">
+                                </div>
+
+                                <div class="card-body">
+                                    <h5 class="card-title">
+                                        {{ strtoupper($comic['title']) }}
+                                    </h5>
+                                </div>
+
                             </div>
-
-                            <div class="card-body">
-                                <h5 class="card-title">
-                                    {{ strtoupper($comic['title']) }}
-                                </h5>
-                            </div>
-
-                        </div>
+                        </a>
                     </div>
                     @endforeach
 

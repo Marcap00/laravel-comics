@@ -14,12 +14,28 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    $imagesBannerIcons = config('images_banner_icons');
     $linksHeader = config('links_header');
-    $imagesFooter = config('images_footer');
     $comicsList = config('comics');
+    $imagesBannerIcons = config('images_banner_icons');
+    $imagesFooter = config('images_footer');
     return view(
         'pages.comics',
         compact('linksHeader', 'comicsList', 'imagesBannerIcons', 'imagesFooter')
     );
 })->name('comics');
+
+Route::get('/comics/{index}', function (int $index) {
+    $linksHeader = config('links_header');
+    $comicsList = config('comics');
+    $imagesBannerIcons = config('images_banner_icons');
+    $imagesFooter = config('images_footer');
+    if (isset($comicsList[$index])) {
+        $comic = $comicsList[$index];
+    } else {
+        abort(404);
+    }
+    return view(
+        'pages.show',
+        compact('linksHeader', 'comicsList', 'comic', 'imagesBannerIcons', 'imagesFooter')
+    );
+})->name('comics.show');
