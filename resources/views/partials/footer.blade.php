@@ -6,7 +6,7 @@
                 <div class="social">
                     <h3>FOLLOW US</h3>
                     @foreach ($imagesFooter as $image)
-                    <img src="{{ asset('images/footer-' . $image['imageUrl'] . '.png') }}" alt="{{ $image['alt'] }}">
+                    <img src="{{ Vite::asset('resources/images/footer-' . $image['imageUrl'] . '.png') }}" alt="{{ $image['alt'] }}">
                     @endforeach
                 </div>
             </div>
